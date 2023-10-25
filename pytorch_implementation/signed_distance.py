@@ -3,7 +3,7 @@
 import igl
 import torch
 from per_face_normals import per_face_normals
-
+from winding_number import winding_number
 
 
 # Parameters	vertices #V by 3 tensor of mesh vertex 3D positions
@@ -45,21 +45,7 @@ def signed_distance(points, vertices, faces, return_libigl=False, extended_verti
     # and comput the dot product between the normal and the vector from the point to the center of the face
     # much faster approach, but slightly less accurate
     if winding_number: 
-        triangles = vertices[faces].unsqueeze(0).repeat(points.shape[0], 1, 1, 1)
-        abc = triangles - points.unsqueeze(1).unsqueeze(1)
-        del triangles
-        norm = torch.norm(abc, dim=3)
-        solid_angle = torch.atan2(  abc[:, :, 0, 0] * abc[:, :, 1, 1] * abc[:, :, 2, 2] +
-                                    abc[:, :, 0, 1] * abc[:, :, 1, 2] * abc[:, :, 2, 0] +
-                                    abc[:, :, 0, 2] * abc[:, :, 1, 0] * abc[:, :, 2, 1] -
-                                    abc[:, :, 0, 2] * abc[:, :, 1, 1] * abc[:, :, 2, 0] -
-                                    abc[:, :, 0, 1] * abc[:, :, 1, 0] * abc[:, :, 2, 2] -
-                                    abc[:, :, 0, 0] * abc[:, :, 1, 2] * abc[:, :, 2, 1],
-                                (torch.sum(abc[:,:,0,:] * abc[:,:,1,:], dim = 2) * norm[:,:,2] +
-                                torch.sum(abc[:,:,0,:] * abc[:,:,2,:], dim = 2) * norm[:,:,1] +
-                                torch.sum(abc[:,:,1,:] * abc[:,:,2,:], dim = 2) * norm[:,:,0]))
-        del abc, norm
-        winding = torch.sum(solid_angle, dim=1) / (2 * torch.pi)
+        winding = winding_number(vertices, faces, points)
         sign = -torch.sign(winding-0.5); del winding, solid_angle
     else: 
         # compute the sign of the distance
