@@ -1,4 +1,4 @@
-## Implementation of libigl `C++` methods using GPU 
+## Implementation of libigl `c++` methods using GPU 
 
 Several [libigl](https://libigl.github.io/) methods are very useful for geometric and graphics calculations. However, they are implemented for CPU and are thus slow to use on large problems. This repository presents some select methods implemented via PyTorch (and in the future, hopefully, directly via Cuda), which makes use of the Cuda architecture and provides a very efficient GPU implementation. 
 
