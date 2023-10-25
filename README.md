@@ -8,5 +8,5 @@ Enjoy!
 
 
 PyTorch: 
-`signed_distance` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [signed_distance.py](https://github.com/tlk13/libigl_gpu/blob/main/pytorch_implementation/signed_distance.py)
+`signed_distance` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [signed_distance.py](https://github.com/tlk13/libigl_gpu/blob/main/pytorch_implementation/signed_distance.py) \
 `per_face_normals` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [per_face_normals.py](https://github.com/tlk13/libigl_gpu/blob/main/pytorch_implementation/per_face_normals.py)
