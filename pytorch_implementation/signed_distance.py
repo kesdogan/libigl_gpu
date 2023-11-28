@@ -2,8 +2,8 @@
 
 import igl
 import torch
-from per_face_normals import per_face_normals
-from winding_number import winding_number
+from pytorch_implementation.per_face_normals import per_face_normals
+from pytorch_implementation.winding_number import winding_number
 
 
 # Parameters	vertices #V by 3 tensor of mesh vertex 3D positions

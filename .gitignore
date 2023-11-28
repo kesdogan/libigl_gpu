@@ -1,0 +1,6 @@
+# Files used for testing 
+*.ipynb
+
+
+# Redundant files generated while programming
+*/__pycache__/*
