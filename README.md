@@ -11,4 +11,4 @@ PyTorch: \
 `signed_distance` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [signed_distance.py](https://github.com/tlk13/libigl_gpu/blob/main/pytorch_implementation/signed_distance.py) \
 `per_face_normals` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [per_face_normals.py](https://github.com/tlk13/libigl_gpu/blob/main/pytorch_implementation/per_face_normals.py)\
 `winding_number` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [winding_number.py](https://github.com/tlk13/libigl_gpu/blob/main/pytorch_implementation/winding_number.py)\
-`snap_points` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [snap_points.py](https://github.com/tlk13/libigl_gpu/blob/main/pytorch_implementation/snap_points.py)
+`snap_points` &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [snap_points.py](https://github.com/tlk13/libigl_gpu/blob/main/pytorch_implementation/snap_points.py)
